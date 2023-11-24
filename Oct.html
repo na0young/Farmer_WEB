@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>October</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body, html {
+            height: 100vh;
+            margin: 0; /*div 요소 주위 공백이라는데 무슨 기능인지 잘 모르겠음*/
+            padding: 0;
+        }
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            border: 40px solid #AFD3B7; /* 테두리 추가 */
+            box-sizing: border-box;
+        }
+        #banner {
+            background-color: #ffffff;
+            height: 100px;
+            text-align: center;
+            padding-top: 30px;
+            color: #000000;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .button {
+            width: 90%;
+            height: 150px;
+            background-color: #E6FACF;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 4px;
+            padding-right: 4px;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none; /* 테두리 없앰 */
+            outline: none;
+            justify-self: center;
+        }
+        .grid-container {
+        display: grid;
+        column-gap: 0px;
+        row-gap:20px;
+        grid-template-columns: auto auto;
+        background-color: #ffffff;
+        padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="banner">10월 제철 농산물</div>
+
+    <div class="grid-container">
+        <button class="button" id="button1">감</button>
+        <button class="button" id="button2">고구마</button>
+        <button class="button" id="button3">귤</button>
+        <button class="button" id="button4">대추</button>
+        <button class="button" id="button5">대파</button>
+        <button class="button" id="button6">무</button>
+        <button class="button" id="button7">배</button>
+        <button class="button" id="button8">사과</button>
+        <button class="button" id="button9">석류</button>
+        <button class="button" id="button10">키위</button>
+        <button class="button" id="button11">팥</button>
+        <button class="button" id="button12">포도</button>
+        <br>
+    </div>
+
+</body>
+
+</html>
