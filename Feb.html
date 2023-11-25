@@ -13,7 +13,8 @@
         }
         #banner {
             height: 200px;
-            text-align: center;
+            padding-left: 32px;
+            padding-right: 10px;
             padding-top: 30px;
             padding-bottom: 30px;
             color: #ECE3CE;
@@ -21,15 +22,21 @@
             font-family: 'Inknut Antiqua', sans-serif;
             font-weight: bold;
         }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            grid-row-gap: 80px;
+            justify-content: center;
+            margin-top: 20px;
+        }
         .button {
-            width: 90%;
+            width: 80%;
             height: 150px;
             background-color: #ECE3CE;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            padding-left: 4px;
-            padding-right: 4px;
             border-radius: 15px;
+            color: #3A4D39;
+            font-family: 'Inknut Antiqua', sans-serif;
             font-size: 24px;
             font-weight: bold;
             display: flex;
@@ -149,20 +156,20 @@
                 <button id="openNav" class="w3-button content-h w3-xxlarge w3-right" onclick="w3_open()">&#9776;</button>
             </div>
         </div>
-        <div id="banner">February</div>
+        <div id="banner">   February</div>
         <div class="grid-container">
-            <button class="button" id="button1">냉이</button>
-            <button class="button" id="button2">달래</button>
-            <button class="button" id="button3">더덕</button>
-            <button class="button" id="button4">딸기</button>
-            <button class="button" id="button5">봄동</button>
-            <button class="button" id="button6">순무</button>
-            <button class="button" id="button7">시금치</button>
-            <button class="button" id="button8">연근</button>
-            <button class="button" id="button9">우엉</button>
-            <button class="button" id="button10">자두</button>
-            <button class="button" id="button11">천혜향</button>
-            <button class="button" id="button12">한라봉</button>
+            <button class="button" id="button1">Shepherd's purse</button>
+            <button class="button" id="button2">Wild garlic</button>
+            <button class="button" id="button3">Deodeok</button>
+            <button class="button" id="button4">Strawberry</button>
+            <button class="button" id="button5">Bomdong</button>
+            <button class="button" id="button6">Turnip</button>
+            <button class="button" id="button7">Spinach</button>
+            <button class="button" id="button8">Lotus root</button>
+            <button class="button" id="button9">Burdock</button>
+            <button class="button" id="button10">Plum</button>
+            <button class="button" id="button11">Cheonhyehyang<br>(tangerine)</button>
+            <button class="button" id="button12">Hallabong<br>(tangerine)</button>
             <br>
         </div>
     
