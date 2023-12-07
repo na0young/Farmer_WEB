@@ -5,7 +5,7 @@
     <title>Special Crop Data</title>
     <style>
 body {
-            background-color: #226A3F;
+            background-color: #d0f3de;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -28,7 +28,7 @@ body {
         }
 
         img {
-            max-width: 100%;
+            width: 90%;
             height: auto;
             margin-top: 20px;
             border-radius: 10px;
@@ -100,12 +100,12 @@ body {
         function fetchDataAndDisplay(itemName, kindName, ranks, unit, day2, dpr2, day3, dpr3, day7, dpr7) {
             var itemInfoContainer = document.getElementById("itemInfoContainer");
             itemInfoContainer.innerHTML = `
-                <h1 style="font-weight: bold;">${itemName}  ${kindName}-${ranks}</h1>
-                <p style="font-size: 18px; color: black;">Unit: ${unit}</p>
-                <img src="${getImagePath(itemName, kindName)}" alt="${itemName} 이미지">
-                <p style="color: red;">${day2} : ${dpr2}won</p>
-                <p style="color: blue;">${day3} : ${dpr3}won</p>
-                <p style="color: black;">${day7} : ${dpr7}won</p>
+            <h1 style="font-size: 50px;font-weight: bold;">${itemName}  ${kindName}-${ranks}</h1>
+            <p style="font-size: 30px; color: black;">Unit: ${unit}</p>
+            <img src="${getImagePath(itemName)}" alt="${itemName} 이미지">
+            <p style="font-size: 40px;color: red;">${day2} : ${dpr2}won</p>
+            <p style="font-size: 40px;color: blue;">${day3} : ${dpr3}won</p>
+            <p style="font-size: 40px;color: black;">${day7} : ${dpr7}won</p>
             `;
         }
     </script>

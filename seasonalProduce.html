@@ -9,12 +9,21 @@
         body {
             background-color: #226A3F;
         }
-
+        #banner {
+            height: 200px;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            color: #ECE3CE;
+            font-size: 70px;
+            font-family: 'Inknut Antiqua', sans-serif;
+            font-weight: bold;
+        }
         .button-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 20px;
-            grid-row-gap: 30px;
+            grid-row-gap: 90px;
             justify-content: center;
             margin-top: 20px;
         }
@@ -56,7 +65,7 @@
 </head>
 
 <body>
-
+    <div id="banner">Month</div>
     <div class="button-container">
         <button class="button" onclick="navigateToPage('January')">January</button>
         <button class="button" onclick="navigateToPage('February')">February</button>
@@ -76,7 +85,7 @@
             var pageUrl;
             // 각각의 카테고리에 따라 페이지 URL 넘겨줌
             switch (category) {
-                case '1January월':
+                case 'January':
                     pageUrl = 'Jan.html';
                     break;
                 case 'February':

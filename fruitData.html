@@ -3,9 +3,10 @@
 
 <head>
     <title>Vegetable Data</title>
+
     <style>
-body {
-            background-color: #226A3F;
+        body {
+            background-color: #549d71;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -15,6 +16,7 @@ body {
             align-items: center;
             height: 100vh;
             justify-content: center;
+            font-family: 'Inknut Antiqua', sans-serif;
         }
 
         .item-info {
@@ -28,7 +30,7 @@ body {
         }
 
         img {
-            max-width: 100%;
+            width: 90%;
             height: auto;
             margin-top: 20px;
             border-radius: 10px;
@@ -39,75 +41,82 @@ body {
             margin-top: 10px;
         }
 
+        .content-img {
+            width: 400px; /* Adjust the width as needed */
+        }
     </style>
 </head>
 
 <body>
 
     <div class="item-info" id="itemInfoContainer">
-        
-<script>
-    /* 페이지 로드 시 query parameter를 읽어서 해당 데이터 표시 */
-    window.onload = function () {
-        var queryParams = new URLSearchParams(window.location.search);
-        var itemName = queryParams.get('item_name');
-        var itemCode = queryParams.get('itemCode');
-        var kindCode = queryParams.get('kindCode');
-        var kindName = queryParams.get('kind_name');
-        var ranks = queryParams.get('ranks');
-        var unit = queryParams.get('unit');
-        var day2 = queryParams.get('day2');
-        var dpr2 = queryParams.get('dpr2');
-        var day3 = queryParams.get('day3');
-        var dpr3 = queryParams.get('dpr3');
-        var day7 = queryParams.get('day7');
-        var dpr7 = queryParams.get('dpr7');
 
-        /* 정의한 함수 사용하여 해당 데이터를 가져와서 표시 */
-        fetchDataAndDisplay(itemName, itemCode, kindCode, kindName, ranks, unit, day2, dpr2, day3, dpr3, day7, dpr7);
-    };
+        <script>
+            /* 페이지 로드 시 query parameter를 읽어서 해당 데이터 표시 */
+            window.onload = function () {
+                var queryParams = new URLSearchParams(window.location.search);
+                var itemName = queryParams.get('item_name');
+                var itemCode = queryParams.get('itemCode');
+                var kindCode = queryParams.get('kindCode');
+                var kindName = queryParams.get('kind_name');
+                var ranks = queryParams.get('ranks');
+                var unit = queryParams.get('unit');
+                var day2 = queryParams.get('day2');
+                var dpr2 = queryParams.get('dpr2');
+                var day3 = queryParams.get('day3');
+                var dpr3 = queryParams.get('dpr3');
+                var day7 = queryParams.get('day7');
+                var dpr7 = queryParams.get('dpr7');
 
-    /* PHP 파일에서 JSON 데이터를 가져오는 함수 */
-    function fetchDataAndDisplay(itemName, itemCode, kindCode, kindName, ranks, unit, day2, dpr2, day3, dpr3, day7, dpr7) {
-        var itemInfoContainer = document.getElementById("itemInfoContainer");
-        itemInfoContainer.innerHTML = `
-            <h1 style="font-weight: bold;">${itemName}  ${kindName}-${ranks}</h1>
-            <p style="font-size: 18px; color: black;">Unit: ${unit}</p>
-            <img src="${getImagePath(itemName)}" alt="${itemName} 이미지">
-            <p style="color: red;">${day2} : ${dpr2}won</p>
-            <p style="color: blue;">${day3} : ${dpr3}won</p>
-            <p style="color: black;">${day7} : ${dpr7}won</p>
-        `;
-    }
+                /* 정의한 함수 사용하여 해당 데이터를 가져와서 표시 */
+                fetchDataAndDisplay(itemName, itemCode, kindCode, kindName, ranks, unit, day2, dpr2, day3, dpr3, day7, dpr7);
+            };
 
-    /* 아이템 이름에 따라 이미지 경로를 반환하는 함수 */
-    function getImagePath(itemName) {
-        switch (itemName) {
-            case 'Apple':
-                return 'img/apple.png';
-            case 'Pear':
-                return 'img/pear.png';
-            case 'Grape':
-                return 'img/grape.png';
-            case 'Tangerine':
-                return 'img/tangerine.png';
-            case 'Persimmon':
-                return 'img/persimmon.png';
-            case 'Banana':
-                return 'img/banana.png';
-            case 'Pineapple':
-                return 'img/pineapple.png';
-            case 'Orange':
-                return 'img/orange.png';
-            case 'Lemon':
-                return 'img/lemon.png';
-            case 'Mango':
-                return 'img/mango.png';
-            default:
-                return '';
-        }
-    }
-</script>
+            /* PHP 파일에서 JSON 데이터를 가져오는 함수 */
+            function fetchDataAndDisplay(itemName, itemCode, kindCode, kindName, ranks, unit, day2, dpr2, day3, dpr3, day7, dpr7) {
+                var itemInfoContainer = document.getElementById("itemInfoContainer");
+                itemInfoContainer.innerHTML = `
+                    <h1 style="font-size: 50px;color: #663300; font-weight: bold;">${itemName}  ${kindName}-${ranks}</h1>
+                    <p style="font-size: 30px; color: #663300; font-weight: bold;">Unit: ${unit}</p>
+                    <img src="${getImagePath(itemName)}" alt="${itemName} 이미지">
+                    <p style="font-size: 40px;color: #993333; font-weight: bold;">${day2} : ${dpr2}won</p>
+                    <p style="font-size: 40px;color: #000066; font-weight: bold;">${day3} : ${dpr3}won</p>
+                    <p style="font-size: 40px;color: black; font-weight: bold;">${day7} : ${dpr7}won</p>
+                    <a href="main.html">
+                        <br><br><br>
+                        <img class="content-img" src="img/logo.png">
+                    </a>
+                `;
+            }
+
+            /* 아이템 이름에 따라 이미지 경로를 반환하는 함수 */
+            function getImagePath(itemName) {
+                switch (itemName) {
+                    case 'Apple':
+                        return 'img/apple.png';
+                    case 'Pear':
+                        return 'img/pear.png';
+                    case 'Grape':
+                        return 'img/grape.png';
+                    case 'Tangerine':
+                        return 'img/tangerine.png';
+                    case 'Persimmon':
+                        return 'img/persimmon.png';
+                    case 'Banana':
+                        return 'img/banana.png';
+                    case 'Pineapple':
+                        return 'img/pineapple.png';
+                    case 'Orange':
+                        return 'img/orange.png';
+                    case 'Lemon':
+                        return 'img/lemon.png';
+                    case 'Mango':
+                        return 'img/mango.png';
+                    default:
+                        return '';
+                }
+            }
+        </script>
 
 </body>
 
